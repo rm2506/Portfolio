@@ -15,14 +15,13 @@ import bgImg from "./assets/HomeBG.jpg"; // full-screen gradient background
 export default function App() {
   // shared nav link style
   const linkStyle = {
-    color: "#000",
+    color: "#ffffffff",
     textDecoration: "none",
     fontWeight: 500,
     letterSpacing: "0.05em",
     fontSize: "1rem",
     padding: "1rem 0",
-    fontFamily:
-      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
   };
 
   return (
@@ -38,15 +37,15 @@ export default function App() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          color: "#000",
+          color: "#fffdfdff",
         }}
       >
         {/* GLOBAL NAVBAR (same on all pages) */}
         <header
           style={{
             width: "100%",
-            borderTop: "1px solid #000",
-            borderBottom: "1px solid #000",
+            //borderTop: "1px solid #ffffffff",
+            borderBottom: "1px solid #ffffffff",
             textAlign: "center",
             padding: "0.4rem 0",
             backgroundColor: "transparent",
