@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
+  NavLink,
 } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
@@ -10,10 +10,9 @@ import Education from "./pages/Education.jsx";
 import Experience from "./pages/Experience.jsx";
 import Projects from "./pages/Projects.jsx";
 
-import bgImg from "./assets/HomeBG.jpg"; // full-screen gradient background
+import bgImg from "./assets/HomeBG.jpg";
 
 export default function App() {
-  // shared nav link style
   const linkStyle = {
     color: "#ffffffff",
     textDecoration: "none",
@@ -21,7 +20,13 @@ export default function App() {
     letterSpacing: "0.05em",
     fontSize: "1rem",
     padding: "1rem 0",
-    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    fontFamily:
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  };
+
+  const activeStyle = {
+    fontWeight: 800,
+    paddingBottom: "0.25rem",
   };
 
   return (
@@ -40,11 +45,10 @@ export default function App() {
           color: "#fffdfdff",
         }}
       >
-        {/* GLOBAL NAVBAR (same on all pages) */}
+        {/* GLOBAL NAVBAR */}
         <header
           style={{
             width: "100%",
-            //borderTop: "1px solid #ffffffff",
             borderBottom: "1px solid #ffffffff",
             textAlign: "center",
             padding: "0.4rem 0",
@@ -61,23 +65,47 @@ export default function App() {
               gap: "2.5rem",
             }}
           >
-            <Link to="/" style={linkStyle}>
-              HOME
-            </Link>
-            <Link to="/education" style={linkStyle}>
-              EDUCATION
-            </Link>
-            <Link to="/projects" style={linkStyle}>
-              PROJECTS
-            </Link>
-            <Link to="/experience" style={linkStyle}>
-              EXPERIENCE
-            </Link>
-            <a
-              href="/Ruchika_Mehta_Resume.pdf"
-              download
-              style={linkStyle}
+            <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                ...linkStyle,
+                ...(isActive ? activeStyle : {}),
+              })}
             >
+              HOME
+            </NavLink>
+
+            <NavLink
+              to="/education"
+              style={({ isActive }) => ({
+                ...linkStyle,
+                ...(isActive ? activeStyle : {}),
+              })}
+            >
+              EDUCATION
+            </NavLink>
+
+            <NavLink
+              to="/projects"
+              style={({ isActive }) => ({
+                ...linkStyle,
+                ...(isActive ? activeStyle : {}),
+              })}
+            >
+              PROJECTS
+            </NavLink>
+
+            <NavLink
+              to="/experience"
+              style={({ isActive }) => ({
+                ...linkStyle,
+                ...(isActive ? activeStyle : {}),
+              })}
+            >
+              EXPERIENCE
+            </NavLink>
+
+            <a href="/Ruchika_Mehta_Resume.pdf" download style={linkStyle}>
               RESUME
             </a>
           </nav>
