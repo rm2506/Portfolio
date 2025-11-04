@@ -118,11 +118,11 @@ export default function Education() {
           <CertCard
             brand="IBM"
             color="linear-gradient(135deg,#5e60ff,#00eaff)"
-            title="IBM Z Day 2024 – AI & Data Certificate"
+            title="IBM Z Day 2024 – AI & Data"
             issuer="IBM"
             issued="Issued Oct 2024"
             href="https://www.virtualbadge.io/certificate-validator?credential=7ab7e94e-b19f-4193-8e44-f03b740be319"
-            skills={["AI", "Data"]}
+            skills={["AI", "Data", "Clouid"]}
           />
 
           <CertCard
@@ -132,7 +132,7 @@ export default function Education() {
             issuer="Palantir Technologies"
             issued="Issued Oct 2023"
             href="https://verify.skilljar.com/c/sqnrimdvvqn7"
-            skills={["Foundry", "Data Pipelines"]}
+            skills={["Foundry", "Data Pipelines", "Analytics"]}
           />
 
           <CertCard
@@ -142,7 +142,7 @@ export default function Education() {
             issuer="University of California, Davis"
             issued="Issued Aug 2022"
             href="https://www.coursera.org/account/accomplishments/certificate/9U8E2XDYJP8N"
-            skills={["SQL", "A/B Testing"]}
+            skills={["SQL", "A/B Testing", "Data Analysis"]}
           />
 
           <CertCard
@@ -226,8 +226,15 @@ function CertCard({
 
         <div style={{ minWidth: 0 }}>
           <div style={certTitle}>{title}</div>
-          <div style={certIssuer}>
-            {issuer} · <span style={muted}>{issued}</span>
+          <div style={certIssuer}>{issuer}</div>
+          <div
+            style={{
+              ...certIssuer,
+              marginTop: 2,
+              color: "rgba(255,255,255,0.7)",
+            }}
+          >
+            {issued}
           </div>
         </div>
       </div>
@@ -365,12 +372,14 @@ const certGrid = {
 const certCard = {
   borderRadius: 14,
   border: "1px solid rgba(255,255,255,0.15)",
+  justifyContent: "space-between",
   background:
     "linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04))",
   padding: 14,
   display: "flex",
   flexDirection: "column",
   gap: 10,
+  minHeight: 180,
 };
 const certHead = { display: "flex", gap: 12, alignItems: "center" };
 const logoDot = {

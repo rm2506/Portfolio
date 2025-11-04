@@ -506,7 +506,7 @@ const tileCTA = {
 const backdrop = {
   position: "fixed",
   inset: 0,
-  background: "rgba(10, 12, 20, 0.55)",
+  background: "rgba(10, 12, 20, 0.75)",
   backdropFilter: "blur(4px)",
   zIndex: 30,
 };
@@ -519,8 +519,7 @@ const modal = {
   width: "min(860px, calc(100% - 28px))",
   borderRadius: 18,
   border: "1px solid rgba(255,255,255,0.18)",
-  background:
-    "linear-gradient(180deg, rgba(20,20,28,0.75), rgba(20,20,28,0.55))",
+  background: "linear-gradient(180deg, rgba(20,20,28,0.9), rgba(20,20,28,0.9))",
   boxShadow: "0 30px 120px rgba(0,0,0,0.55)",
   zIndex: 40,
   color: "#eaf2ff",
@@ -537,9 +536,12 @@ const closeBtn = {
   background: "rgba(255,255,255,0.1)",
   border: "1px solid rgba(255,255,255,0.2)",
   color: "#fff",
-  width: 34,
-  height: 34,
+  width: 30,
+  height: 30,
   borderRadius: 10,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   cursor: "pointer",
   fontSize: "1rem",
   lineHeight: "1rem",
