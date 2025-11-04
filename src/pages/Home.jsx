@@ -142,7 +142,7 @@ export default function Home() {
             View my story
           </a>
           <a
-            href="/projects" // if you have an id for projects
+            href="/projects"
             style={{
               padding: "0.85rem 1.9rem",
               background: "rgba(0,0,0,0.1)",
