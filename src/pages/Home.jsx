@@ -6,13 +6,14 @@ export default function Home() {
       style={{
         width: "100%",
         color: "#ffffffff",
-        fontFamily: "'Playfair Display', Georgia, serif",
+        fontFamily:
+          "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
       }}
     >
       {/* ================= HERO (shows first, over the new neon gradient) ================ */}
       <div
         style={{
-          minHeight: "82vh", // fill most of the screen
+          minHeight: "82vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -20,70 +21,143 @@ export default function Home() {
           textAlign: "center",
           padding: "6rem 1rem 4rem",
           boxSizing: "border-box",
-          // light text so it pops on your dark neon bg
           color: "rgba(255,255,255,0.95)",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* animation for gradient text */}
+        <style>{`
+    @keyframes nameSweep {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  `}</style>
+
+        {/* big soft glow */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            width: "520px",
+            height: "520px",
+            background:
+              "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%)",
+            bottom: "-30%",
+            filter: "blur(60px)",
+            zIndex: 0,
+          }}
+        />
+        {/* glow behind name */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            width: "420px",
+            height: "220px",
+            top: "35%",
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 65%)",
+            filter: "blur(20px)",
+            zIndex: 0,
+          }}
+        />
+
+        {/* name */}
         <h1
           style={{
             margin: 0,
-            lineHeight: 1,
-            fontWeight: 300,
-            letterSpacing: "0.0em",
-            fontSize: "clamp(3rem, 10vw, 8.5rem)",
+            lineHeight: 1.03,
+            fontWeight: 700,
+            letterSpacing: "-0.03em",
+            fontSize: "clamp(3.3rem, 9vw, 6.7rem)",
             textTransform: "uppercase",
-            textShadow: "0 6px 30px rgba(0,0,0,0.35)",
-            fontFamily: "'Safira March', 'Playfair Display', serif",
-            lineSpacing: "-0.02em",
+            background:
+              "linear-gradient(120deg, #ffffff 0%, #cbb8ff 35%, #6de4ff 80%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundSize: "180% 180%",
+            animation: "nameSweep 12s ease-in-out infinite",
+            zIndex: 1,
+            fontFamily:
+              "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
           }}
         >
-          Ruchika&nbsp;Mehta
+          Ruchika Mehta
         </h1>
 
+        {/* thin accent line */}
+        <div
+          style={{
+            width: "58px",
+            height: "2px",
+            background: "rgba(255,255,255,0.65)",
+            marginTop: "1.1rem",
+            borderRadius: 999,
+            zIndex: 1,
+          }}
+        />
+
+        {/* subtitle */}
         <p
           style={{
-            marginTop: "1.25rem",
+            marginTop: "1.1rem",
             fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-            fontSize: "clamp(0.95rem, 2.2vw, 1.2rem)",
-            opacity: 0.95,
-            textShadow: "0 3px 18px rgba(0,0,0,0.35)",
+              "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+            fontSize: "1rem",
+            opacity: 0.9,
+            zIndex: 1,
           }}
         >
           Software Engineer · AI &amp; Machine Learning · App Developer
         </p>
 
-        {/* subtle scroll cue */}
-        <a
-          href="#about-section"
+        {/* CTAs */}
+        <div
           style={{
-            marginTop: "3rem",
-            padding: "0.8rem 2rem",
-            fontSize: "1rem",
-            fontWeight: 500,
-            letterSpacing: "0.05em",
-            color: "#fff",
-            border: "1.5px solid rgba(255,255,255,0.8)",
-            borderRadius: "40px",
-            textDecoration: "none",
-            backdropFilter: "blur(8px)",
-            background: "rgba(255,255,255,0.1)",
-            transition: "all 0.35s ease",
-            cursor: "pointer",
-            fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(255,255,255,0.3)";
-            e.currentTarget.style.color = "#000";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-            e.currentTarget.style.color = "#fff";
+            display: "flex",
+            gap: "1rem",
+            marginTop: "2.3rem",
+            zIndex: 1,
+            flexWrap: "wrap",
+            justifyContent: "center",
           }}
         >
-          Learn More
-        </a>
+          <a
+            href="#about-section"
+            style={{
+              padding: "0.85rem 1.9rem",
+              background: "rgba(255,255,255,0.9)",
+              color: "#10111a",
+              borderRadius: 999,
+              textDecoration: "none",
+              fontWeight: 600,
+              fontFamily:
+                "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+              border: "1px solid rgba(255,255,255,0.6)",
+              boxShadow: "0 18px 35px rgba(0,0,0,0.12)",
+            }}
+          >
+            View my story
+          </a>
+          <a
+            href="/projects" // if you have an id for projects
+            style={{
+              padding: "0.85rem 1.9rem",
+              background: "rgba(0,0,0,0.1)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              borderRadius: 999,
+              color: "#fff",
+              textDecoration: "none",
+              fontFamily:
+                "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+              backdropFilter: "blur(6px)",
+            }}
+          >
+            See projects ↗
+          </a>
+        </div>
       </div>
 
       {/* ===== WIDTH LIMITER FOR THE REST OF THE PAGE (appears after scroll) ===== */}
@@ -97,21 +171,23 @@ export default function Home() {
         }}
       >
         {/* ====== HEADING BLOCK (now below the hero) ====== */}
-        <div style={{ textAlign: "center", paddingTop: 0, marginTop: 0 }}>
+        <div style={{ textAlign: "center", marginTop: "2rem" }}>
           <h2
             style={{
-              fontSize: "4.5rem",
+              fontSize: "4.7rem",
               fontWeight: 400,
               lineHeight: 1.05,
               margin: 0,
               padding: 0,
               color: "#ffffffff",
+              fontFamily: "'Safira March', 'Playfair Display', serif",
             }}
           >
             <span
               style={{
                 fontStyle: "italic",
-                fontFamily: "'Safira March', 'Playfair Display', serif",
+                fontFamily:
+                  "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                 fontWeight: 300,
               }}
             >
@@ -120,8 +196,9 @@ export default function Home() {
             <span
               style={{
                 fontStyle: "normal",
-                fontFamily: "'Safira March', 'Playfair Display', serif",
-                fontWeight: 500,
+                fontFamily:
+                  "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
+                fontWeight: 350,
               }}
             >
               I am Ruchika
@@ -147,7 +224,8 @@ export default function Home() {
             marginTop: "2rem",
             width: "100%",
             color: "#ffffffff",
-            fontFamily: "'Playfair Display', Georgia, serif",
+            fontFamily:
+              "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
           }}
         >
           <div
@@ -159,32 +237,53 @@ export default function Home() {
               gap: "2rem",
             }}
           >
-            {/* LEFT COLUMN - PHOTO */}
+            {/* LEFT COLUMN - PHOTO (glass frame) */}
             <div
               style={{
                 flex: "0 0 320px",
                 maxWidth: "320px",
-                border: "1px solid #ffffffff",
-                padding: "0.5rem",
-                boxSizing: "border-box",
                 alignSelf: "center",
                 marginLeft: "-1rem",
                 marginTop: "1rem",
-                transform: "translateY(10px)",
-                background: "#fff",
               }}
             >
-              <img
-                src={myPhoto}
-                alt="Ruchika"
+              <div
                 style={{
+                  position: "relative",
                   width: "100%",
-                  height: "auto",
-                  display: "block",
-                  border: "1px solid #ffffffff",
-                  objectFit: "cover",
+                  aspectRatio: "3 / 4",
+                  borderRadius: "18px",
+                  background:
+                    "linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0))",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  backdropFilter: "blur(6px)",
+                  boxShadow: "0 12px 40px rgba(0,0,0,0.35)",
+                  overflow: "hidden",
                 }}
-              />
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "radial-gradient(circle at top, rgba(255,140,180,0.35), rgba(0,0,0,0) 65%)",
+                    pointerEvents: "none",
+                  }}
+                />
+                <img
+                  src={myPhoto}
+                  alt="Ruchika"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "inherit",
+                    display: "block",
+                    position: "relative",
+                    zIndex: 1,
+                  }}
+                />
+              </div>
             </div>
 
             {/* RIGHT COLUMN - TEXT */}
@@ -194,7 +293,7 @@ export default function Home() {
                 minWidth: "300px",
                 maxWidth: "850px",
                 fontFamily:
-                  "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                  "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                 fontSize: "0.95rem",
                 lineHeight: 1.6,
                 color: "#ffffffff",
@@ -205,7 +304,8 @@ export default function Home() {
                   fontSize: "2rem",
                   fontWeight: 600,
                   margin: "0 0 1rem 0",
-                  fontFamily: "'Safira March', 'Playfair Display', serif",
+                  fontFamily:
+                    "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                   color: "#ffffffff",
                 }}
               >
@@ -217,11 +317,12 @@ export default function Home() {
                 <div
                   style={{
                     fontWeight: 600,
-                    fontSize: "1.5rem",
+                    fontSize: "1.2rem",
                     display: "flex",
                     alignItems: "center",
                     gap: "0.5rem",
-                    fontFamily: "'Safira March', 'Playfair Display', serif",
+                    fontFamily:
+                      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                     color: "#ffffffff",
                     marginBottom: "0.25rem",
                   }}
@@ -234,9 +335,9 @@ export default function Home() {
                 <p
                   style={{
                     margin: 0,
-                    fontSize: "1.2rem",
+                    fontSize: "1rem",
                     fontFamily:
-                      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                   }}
                 >
                   Born in New Delhi, India, and raised across Asia, West Africa,
@@ -259,11 +360,12 @@ export default function Home() {
                 <div
                   style={{
                     fontWeight: 600,
-                    fontSize: "1.5rem",
+                    fontSize: "1.2rem",
                     display: "flex",
                     alignItems: "center",
                     gap: "0.5rem",
-                    fontFamily: "'Safira March', 'Playfair Display', serif",
+                    fontFamily:
+                      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                     color: "#fcfbfbff",
                     marginBottom: "0.25rem",
                   }}
@@ -276,9 +378,9 @@ export default function Home() {
                 <p
                   style={{
                     margin: 0,
-                    fontSize: "1.2rem",
+                    fontSize: "1rem",
                     fontFamily:
-                      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                   }}
                 >
                   India taught me Atithi Devo Bhava — the guest is divine, and
@@ -297,11 +399,12 @@ export default function Home() {
                 <div
                   style={{
                     fontWeight: 600,
-                    fontSize: "1.5rem",
+                    fontSize: "1.2rem",
                     display: "flex",
                     alignItems: "center",
                     gap: "0.5rem",
-                    fontFamily: "'Safira March', 'Playfair Display', serif",
+                    fontFamily:
+                      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                     color: "#ffffffff",
                     marginBottom: "0.25rem",
                   }}
@@ -314,9 +417,9 @@ export default function Home() {
                 <p
                   style={{
                     margin: 0,
-                    fontSize: "1.2rem",
+                    fontSize: "1rem",
                     fontFamily:
-                      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                      "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                   }}
                 >
                   Transitioning between continents and cultures has taught me to
@@ -346,8 +449,8 @@ export default function Home() {
             textAlign: "center",
             boxSizing: "border-box",
             fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-            fontSize: "1.15rem",
+              "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
+            fontSize: "1.05rem",
             lineHeight: 1.8,
             color: "#ffffffff",
             background: "transparent",
@@ -358,9 +461,10 @@ export default function Home() {
               style={{
                 margin: 0,
                 fontWeight: 600,
-                fontSize: "2rem",
+                fontSize: "1.8rem",
                 marginBottom: "0.3rem",
-                fontFamily: "'Safira March', 'Playfair Display', serif",
+                fontFamily:
+                  "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
                 fontStyle: "italic",
               }}
             >
@@ -369,9 +473,9 @@ export default function Home() {
             <p
               style={{
                 margin: 0,
-                fontSize: "1.2rem",
+                fontSize: "1.05rem",
                 fontFamily:
-                  "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                  "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
               }}
             >
               My multicultural background gave me the patience to listen and my
@@ -394,7 +498,7 @@ export default function Home() {
             marginTop: "0.5rem",
             padding: "1rem 0 1rem 0",
             fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+              "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
             fontSize: "1rem",
             color: "#ffffffff",
           }}
@@ -436,14 +540,7 @@ export default function Home() {
                 <path d="M4 4h16v16H4z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <span
-                style={{
-                  fontFamily:
-                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                }}
-              >
-                ruchika.mehta25@gmail.com
-              </span>
+              <span>ruchika.mehta25@gmail.com</span>
             </a>
 
             {/* LINKEDIN */}
@@ -471,14 +568,7 @@ export default function Home() {
               >
                 <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-.96 0-1.73-.78-1.73-1.73s.77-1.73 1.73-1.73c.95 0 1.73.78 1.73 1.73s-.78 1.73-1.73 1.73zm13.5 10.3h-3v-4.7c0-1.12-.02-2.56-1.56-2.56-1.57 0-1.81 1.23-1.81 2.48v4.78h-3v-9h2.88v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v4.73z" />
               </svg>
-              <span
-                style={{
-                  fontFamily:
-                    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                }}
-              >
-                linkedin.com/in/ruchikamehta25
-              </span>
+              <span>linkedin.com/in/ruchikamehta25</span>
             </a>
           </div>
 
@@ -487,8 +577,6 @@ export default function Home() {
               marginTop: "1.5rem",
               fontSize: "0.85rem",
               opacity: 0.75,
-              fontFamily:
-                "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
             }}
           >
             © 2025 Ruchika Mehta · Portfolio
