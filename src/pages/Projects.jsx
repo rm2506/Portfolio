@@ -9,6 +9,7 @@ import TournaFencePresentation from "../assets/files/TournaFencePresentation.pdf
 
 export default function Projects() {
   const [active, setActive] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
 
   // ESC to close modal
   const onKey = useCallback((e) => {
@@ -189,7 +190,15 @@ export default function Projects() {
           p.placeholder ? (
             <PlaceholderTile key={p.id} p={p} />
           ) : (
-            <ProjectTile key={p.id} p={p} onOpen={() => setActive(p)} />
+            <ProjectTile
+              key={p.id}
+              p={p}
+              onOpen={() => setActive(p)}
+              hovered={hoveredId === p.id}
+              dimmed={hoveredId && hoveredId !== p.id}
+              onHover={() => setHoveredId(p.id)}
+              onLeave={() => setHoveredId(null)}
+            />
           )
         )}
       </div>
@@ -273,14 +282,20 @@ export default function Projects() {
 
 /* ---------- Tiles ---------- */
 
-function ProjectTile({ p, onOpen }) {
+function ProjectTile({ p, onOpen, hovered, dimmed, onHover, onLeave }) {
   return (
     <article
-      style={tile}
+      style={{
+        ...tile,
+        ...(hovered ? tileHover : {}),
+        ...(dimmed ? tileDimmed : {}),
+      }}
       onClick={onOpen}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && onOpen()}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
     >
       {p.award && <div style={awardBadge}>🏆 {p.award}</div>}
       <div style={tileTopGlow} />
@@ -318,7 +333,9 @@ function ProjectTile({ p, onOpen }) {
         </div>
       </div>
 
-      <div style={tileCTA}>View details</div>
+      <div style={{ ...tileCTA, ...(hovered ? tileCTAHover : {}) }}>
+        View details
+      </div>
     </article>
   );
 }
@@ -413,7 +430,7 @@ const grid = {
   gap: "14px",
 };
 
-/* Card / Tile */
+//Tile
 const tile = {
   position: "relative",
   borderRadius: 16,
@@ -427,7 +444,19 @@ const tile = {
   gap: 10,
   cursor: "pointer",
   transition:
-    "transform .18s ease, box-shadow .18s ease, border-color .18s ease",
+    "transform .18s ease, box-shadow .18s ease, border-color .18s ease, opacity .18s ease",
+};
+
+const tileHover = {
+  transform: "translateY(-4px) scale(1.02)",
+  boxShadow: "0 18px 50px rgba(0,0,0,0.6)",
+  borderColor: "rgba(138,233,255,0.8)",
+};
+
+const tileDimmed = {
+  opacity: 0.55,
+  transform: "scale(0.98)",
+  boxShadow: "0 4px 18px rgba(0,0,0,0.25)",
 };
 
 const tileTopGlow = {
@@ -467,7 +496,7 @@ const tileMeta = {
   color: "rgba(255,255,255,0.78)",
   fontSize: ".85rem",
   display: "flex",
-  flexDirection: "column", // ⬅️ key line
+  flexDirection: "column",
   lineHeight: 1.4,
 };
 
@@ -500,6 +529,12 @@ const tileCTA = {
   padding: "6px 10px",
   borderRadius: 10,
   background: "transparent",
+  transition: "all .18s ease",
+};
+
+const tileCTAHover = {
+  background: "rgba(138,233,255,0.12)",
+  borderColor: "rgba(138,233,255,0.6)",
 };
 
 /* Modal */
