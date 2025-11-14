@@ -1,9 +1,27 @@
 import React from "react";
 import aramarkLogo from "../assets/logos/aramark.png";
 import holmanLogo from "../assets/logos/holman.png";
+import drexelLogo from "../assets/logos/drexel.jpg";
 
 export default function Experience() {
   const roles = [
+    {
+      id: "drexel-ambassador",
+      logo: drexelLogo,
+      role: "Student Ambassador (Paid)",
+      company: "Drexel University",
+      location: "Philadelphia, PA",
+      dates: "Sept 2021 – Sept 2025",
+      summary:
+        "Represent Drexel at admissions events, leading campus tours and supporting prospective students and families.",
+      bullets: [
+        "Coordinate campus tours, open houses, and new student induction events with the Office of Admissions and Events & Visitor Relations.",
+        "Communicate Drexel’s co-op model, academic programs, and student life to diverse groups of prospective students and parents.",
+        "Answer questions, share personal experience, and provide guidance to help students evaluate fit and navigate the admissions process.",
+        "Collaborate with 20+ ambassadors and staff each term to ensure smooth event flow and a consistent, welcoming visitor experience.",
+      ],
+      tags: ["Public Speaking", "Student Outreach", "Admissions Events"],
+    },
     {
       id: "aramark",
       logo: aramarkLogo,
@@ -19,7 +37,6 @@ export default function Experience() {
         "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
         "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
       ],
-
       tags: ["Palantir Foundry", "AI Tools", "Data Analysis", "Vendor Spend"],
     },
     {
@@ -37,7 +54,6 @@ export default function Experience() {
         "Mapped ~50 inbound client data formats into standardized internal schemas, reducing ingestion and validation errors by nearly 40% and strengthening data integrity across platforms.",
         "Generated 36 detailed performance reports tracking case lifecycle metrics (lodged, in-progress, completed), providing visibility into resolution speed and operational efficiency.",
       ],
-
       tags: ["SQL / ETL", "FleetTrak", "Reporting", "Data Mapping"],
     },
   ];
@@ -104,191 +120,3 @@ export default function Experience() {
     </section>
   );
 }
-
-/* ---------- styles ---------- */
-
-const wrap = {
-  borderTop: "1px solid rgba(255,255,255,0.12)",
-  padding: "3.5rem 1.25rem 3.75rem",
-  backdropFilter: "blur(6px)",
-  color: "#f5f7ff",
-  minHeight: "100vh",
-  fontFamily:
-    "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
-};
-
-const headerBar = {
-  maxWidth: 980,
-  margin: "0 auto 2.25rem",
-};
-
-const title = {
-  fontSize: "2.35rem",
-  fontWeight: 800,
-  letterSpacing: "0.02em",
-  margin: 0,
-  background: "linear-gradient(90deg, #ffffff 20%, #b5c7ff 60%, #8ae9ff 100%)",
-  WebkitBackgroundClip: "text",
-  color: "transparent",
-};
-
-const subtitle = {
-  marginTop: ".55rem",
-  color: "rgba(236,243,255,0.72)",
-  maxWidth: 520,
-  lineHeight: 1.5,
-};
-
-const timeline = {
-  maxWidth: 980,
-  margin: "0 auto",
-  display: "flex",
-  flexDirection: "column",
-  gap: 20,
-  position: "relative",
-};
-
-const item = {
-  display: "flex",
-  gap: 18,
-  position: "relative",
-};
-
-const rail = {
-  width: 28,
-  display: "flex",
-  justifyContent: "center",
-  position: "relative",
-};
-
-const railDot = {
-  width: 14,
-  height: 14,
-  borderRadius: "999px",
-  border: "2px solid rgba(138,233,255,1)",
-  background: "rgba(4,11,15,1)",
-  zIndex: 2,
-  marginTop: 16,
-  boxShadow: "0 0 18px rgba(138,233,255,0.45)",
-};
-
-const railLine = {
-  position: "absolute",
-  top: 32,
-  width: 2,
-  height: "calc(100% - 18px)",
-  background:
-    "linear-gradient(180deg, rgba(138,233,255,0.1), rgba(138,233,255,0))",
-};
-
-const card = {
-  background: "rgba(10,13,21,0.55)",
-  border: "1px solid rgba(255,255,255,0.08)",
-  borderRadius: 16,
-  boxShadow: "0 20px 80px rgba(0,0,0,0.35)",
-  padding: "1.2rem 1.25rem 1.1rem",
-  flex: 1,
-  backdropFilter: "blur(6px)",
-  display: "flex",
-  flexDirection: "column",
-  gap: 12,
-};
-
-const cardTop = {
-  display: "flex",
-  justifyContent: "space-between",
-  gap: 14,
-  alignItems: "flex-start",
-};
-
-const leftHeader = {
-  display: "flex",
-  alignItems: "center",
-  gap: 12,
-};
-
-const logoWrap = {
-  width: 46,
-  height: 46,
-  borderRadius: 10,
-  border: "1px solid rgba(255,255,255,0.25)",
-  background: "rgba(255,255,255,0.08)",
-  display: "grid",
-  placeItems: "center",
-  overflow: "hidden",
-  flexShrink: 0,
-};
-
-const logoImg = {
-  width: "100%",
-  height: "100%",
-  objectFit: "contain",
-  borderRadius: "inherit",
-};
-
-const roleTitle = {
-  fontSize: "1.08rem",
-  fontWeight: 700,
-  margin: 0,
-  color: "#fff",
-};
-
-const companyLine = {
-  display: "flex",
-  flexWrap: "wrap",
-  gap: 6,
-  marginTop: 4,
-  fontSize: ".85rem",
-  color: "rgba(235,242,255,0.7)",
-};
-
-const company = {
-  fontWeight: 500,
-  color: "rgba(255,255,255,0.9)",
-};
-
-const dot = { opacity: 0.4 };
-
-const dateBadge = {
-  background: "rgba(4,10,18,0.45)",
-  border: "1px solid rgba(138,233,255,0.21)",
-  borderRadius: 999,
-  padding: "4px 12px 5px",
-  fontSize: ".7rem",
-  color: "rgba(236,243,255,0.85)",
-  whiteSpace: "nowrap",
-};
-
-const summary = {
-  margin: 0,
-  fontSize: ".85rem",
-  color: "rgba(236,243,255,0.78)",
-  lineHeight: 1.5,
-};
-
-const bulletList = {
-  margin: 0,
-  paddingLeft: "1.15rem",
-  display: "grid",
-  gap: 4,
-  color: "rgba(245,247,255,0.78)",
-  fontSize: ".83rem",
-  lineHeight: 1.5,
-};
-
-const tagRow = {
-  display: "flex",
-  flexWrap: "wrap",
-  gap: 8,
-  marginTop: 2,
-};
-
-const tag = {
-  fontSize: ".7rem",
-  padding: "4px 10px",
-  borderRadius: 999,
-  border: "1px solid rgba(255,255,255,0.12)",
-  background:
-    "linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0))",
-  color: "rgba(231,245,255,0.9)",
-};
