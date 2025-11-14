@@ -212,6 +212,7 @@ function CertCard({
   logo, // optional explicit logo override
 }) {
   const logoSrc = logo || BRAND_LOGOS[brand] || BRAND_LOGOS[issuer];
+  const [hover, setHover] = React.useState(false);
 
   return (
     <article style={certCard}>
@@ -247,7 +248,14 @@ function CertCard({
         ))}
       </div>
 
-      <a style={ghostBtn} href={href} target="_blank" rel="noreferrer">
+      <a
+        style={{ ...ghostBtn, ...(hover ? ghostBtnHover : {}) }}
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
         Show credential ↗
       </a>
     </article>
@@ -331,6 +339,7 @@ const progressMeta = {
 };
 
 const muted = { color: "rgba(255,255,255,0.7)" };
+
 const completedText = { color: "#eafff5", fontWeight: 700 };
 
 const sectionHeader = {
@@ -338,7 +347,9 @@ const sectionHeader = {
   paddingBottom: 10,
   marginBottom: 10,
 };
+
 const sectionTitle = { fontWeight: 700, color: "#fff" };
+
 const sectionSub = { fontSize: "0.85rem", color: "rgba(255,255,255,0.75)" };
 
 const rowLabel = {
@@ -350,6 +361,7 @@ const rowLabel = {
 };
 
 const chipWrap = { display: "flex", flexWrap: "wrap", gap: 8 };
+
 const chip = {
   display: "inline-flex",
   alignItems: "center",
@@ -382,6 +394,7 @@ const certCard = {
   minHeight: 180,
 };
 const certHead = { display: "flex", gap: 12, alignItems: "center" };
+
 const logoDot = {
   width: 40,
   height: 40,
@@ -415,7 +428,15 @@ const ghostBtn = {
   color: "#e8eeff",
   textDecoration: "none",
   fontSize: "0.9rem",
-  transition: "all .2s ease",
   background: "transparent",
   backdropFilter: "blur(2px)",
+  transition:
+    "background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease",
+};
+
+const ghostBtnHover = {
+  background: "rgba(138,233,255,0.14)",
+  borderColor: "rgba(138,233,255,0.7)",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+  transform: "translateY(-1px)",
 };
