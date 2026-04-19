@@ -5,201 +5,242 @@ import drexelLogo from "../assets/logos/drexel.png";
 import sqsm from "../assets/logos/SquashSmartsLogo.png";
 
 export default function Experience() {
-  const roles = [
+  const experienceGroups = [
     {
-      id: "aramark",
+      id: "aramark-group",
       logo: aramarkLogo,
-      role: "Technical Analyst",
       company: "Aramark Corp",
       location: "Philadelphia, PA",
-      dates: "Apr 2026 - Present",
-      summary:
-        "Driving enterprise data reliability and system integration across global supply chain and finance operations, with a focus on scalability, automation, and AI-enabled optimization.",
-      bullets: [
-        "Supported enterprise data processes and system integrations across Global Supply Chain and Finance systems",
-        "Managed and monitored data feeds to ensure accuracy, consistency, and timely delivery across cross-functional platforms",
-        "Improved data quality and reduced manual processing by enhancing data formats and automating workflows",
-        "Maintained and troubleshot legacy applications to ensure system stability and business continuity",
-        "Contributed to migration of legacy data feeds to modern platforms, improving scalability and performance",
-        "Performed data coding, validation, mastering, and testing to uphold high data integrity standards",
-        "Partnered with Finance, IT, and distribution teams to align data processes with operational and financial needs",
-        "Documented data flows, system requirements, and technical processes to improve transparency and knowledge sharing",
-        "Supported adoption of AI-enabled tools for data validation, monitoring, and workflow optimization",
-        "Identified and contributed to AI and automation use cases aligned with enterprise governance and responsible AI practices",
-      ],
-      tags: [
-        "Data Engineering",
-        "System Integration",
-        "Data Quality",
-        "Automation",
-        "AI Tools",
+      roles: [
+        {
+          id: "aramark-tech-analyst",
+          role: "Technical Analyst",
+          dates: "Apr 2026 – Present",
+          summary:
+            "Driving enterprise data reliability and system integration across global supply chain and finance operations, with a focus on scalability, automation, and AI-enabled optimization.",
+          bullets: [
+            "Supported enterprise data processes and system integrations across Global Supply Chain and Finance systems",
+            "Managed and monitored data feeds to ensure accuracy, consistency, and timely delivery across cross-functional platforms",
+            "Improved data quality and reduced manual processing by enhancing data formats and automating workflows",
+            "Maintained and troubleshot legacy applications to ensure system stability and business continuity",
+            "Contributed to migration of legacy data feeds to modern platforms, improving scalability and performance",
+            "Performed data coding, validation, mastering, and testing to uphold high data integrity standards",
+            "Partnered with Finance, IT, and distribution teams to align data processes with operational and financial needs",
+            "Documented data flows, system requirements, and technical processes to improve transparency and knowledge sharing",
+            "Supported adoption of AI-enabled tools for data validation, monitoring, and workflow optimization",
+            "Identified and contributed to AI and automation use cases aligned with enterprise governance and responsible AI practices",
+          ],
+          tags: [
+            "Data Engineering",
+            "System Integration",
+            "Data Quality",
+            "Automation",
+            "AI Tools",
+          ],
+        },
+        {
+          id: "aramark-it-specialist",
+          role: "IT Specialist",
+          dates: "Dec 2025 – Apr 2026",
+          summary:
+            "Supported finance and supply chain systems by improving data reliability, modernizing workflows, and enabling scalable infrastructure.",
+          bullets: [
+            "Ensured accurate and timely data flows across internal systems and external partners, supporting critical finance and supply chain operations",
+            "Streamlined data processes and standardized formats to reduce manual effort and improve efficiency in financial reporting pipelines",
+            "Contributed to the migration of legacy data feeds to a modern platform, enhancing scalability, performance, and maintainability",
+            "Assisted in data mastering, validation, and testing to maintain high data quality and support reliable decision-making",
+            "Partnered with Finance, IT, and distribution teams to identify process gaps and implement practical, data-driven solutions",
+          ],
+          tags: [
+            "Process Optimization",
+            "Data Engineering",
+            "Financial Reporting",
+            "Data Integration",
+          ],
+        },
+        {
+          id: "aramark-coop",
+          role: "Technical Data Analyst Co-op",
+          dates: "Sept 2023 – Mar 2024",
+          summary:
+            "Supported AI/tooling evaluations and data harmonization to improve developer and finance workflows.",
+          bullets: [
+            "Evaluated over 10 AI-assisted development tools, including Amazon CodeWhisperer and GitHub Copilot, benchmarking accuracy, latency, and usability to identify the most efficient integration options for internal developers.",
+            "Collaborated with the Palantir Foundry Data Harmonization team to pilot new pipeline-builder capabilities, map data schemas, and provide structured feedback improving system reliability and user adoption.",
+            "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
+            "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
+          ],
+          tags: [
+            "Palantir Foundry",
+            "AI Tools",
+            "Data Analysis",
+            "Vendor Spend",
+          ],
+        },
       ],
     },
 
     {
-      id: "aramark",
-      logo: aramarkLogo,
-      role: "IT Specialist",
-      company: "Aramark Corp",
-      location: "Philadelphia, PA",
-      dates: "Dec 2025 – Apr 2026",
-      summary:
-        "Supported finance and supply chain systems by improving data reliability, modernizing workflows, and enabling scalable infrastructure.",
-      bullets: [
-        "Ensured accurate and timely data flows across internal systems and external partners, supporting critical finance and supply chain operations",
-        "Streamlined data processes and standardized formats to reduce manual effort and improve efficiency in financial reporting pipelines",
-        "Contributed to the migration of legacy data feeds to a modern platform, enhancing scalability, performance, and maintainability",
-        "Assisted in data mastering, validation, and testing to maintain high data quality and support reliable decision-making",
-        "Partnered with Finance, IT, and distribution teams to identify process gaps and implement practical, data-driven solutions",
-      ],
-      tags: [
-        "Process Optimization",
-        "Data Engineering",
-        "Financial Reporting",
-        "Data Integration",
-      ],
-    },
-
-    {
-      id: "sqsm",
+      id: "sqsm-group",
       logo: sqsm,
-      role: "Coordinator of Technology (Part-Time)",
       company: "SquashSmarts",
       location: "Philadelphia, PA",
-      dates: "Nov 2025 – Present",
-      summary:
-        "Driving technology strategy and AI adoption to modernize nonprofit operations and enhance program delivery.",
-      bullets: [
-        "Leading AI implementation initiatives to streamline workflows and improve organizational effectiveness",
-        "Evaluating and deploying hardware, software, and digital systems to optimize operational efficiency",
-        "Designing and prototyping technology solutions aligned with youth academic and enrichment programs",
-        "Partnering with executive leadership to define and scale long-term technology strategy",
-        "Advising on system architecture, automation opportunities, and data management best practices",
-      ],
-      tags: [
-        "AI Implementation",
-        "Nonprofit Technology",
-        "System Architecture",
-        "Operational Efficiency",
+      roles: [
+        {
+          id: "sqsm-tech",
+          role: "Coordinator of Technology (Part-Time)",
+          dates: "Nov 2025 – Present",
+          summary:
+            "Driving technology strategy and AI adoption to modernize nonprofit operations and enhance program delivery.",
+          bullets: [
+            "Leading AI implementation initiatives to streamline workflows and improve organizational effectiveness",
+            "Evaluating and deploying hardware, software, and digital systems to optimize operational efficiency",
+            "Designing and prototyping technology solutions aligned with youth academic and enrichment programs",
+            "Partnering with executive leadership to define and scale long-term technology strategy",
+            "Advising on system architecture, automation opportunities, and data management best practices",
+          ],
+          tags: [
+            "AI Implementation",
+            "Nonprofit Technology",
+            "System Architecture",
+            "Operational Efficiency",
+          ],
+        },
       ],
     },
 
     {
-      id: "drexel-ambassador",
+      id: "drexel-group",
       logo: drexelLogo,
-      role: "Senior Student Ambassador (Paid)",
       company: "Drexel University",
       location: "Philadelphia, PA",
-      dates: "Sept 2021 – Sept 2025",
-      summary:
-        "Represented Drexel at high-impact admissions events, leading tours, speaking on panels, and guiding prospective students and families.",
-      bullets: [
-        "Served as a Senior Ambassador for four years, supporting ~48 major admissions events across 16 quarters and engaging thousands of prospective students and families.",
-        "Delivered 60+ campus tours and participated in 15+ student panels, providing clear, personalized guidance on academics, co-op, campus life, and university fit.",
-        "Acted as a primary communicator of Drexel’s co-op model and academic pathways, translating complex programs into compelling, audience-tailored messaging for domestic and international visitors.",
-        "Collaborated with 20–30 ambassadors and admissions staff each term to execute high-volume events with smooth logistics, strong branding consistency, and exceptional visitor satisfaction.",
-      ],
-      tags: [
-        "Leadership",
-        "Public Speaking",
-        "Student Outreach",
-        "Admissions Events",
+      roles: [
+        {
+          id: "drexel-ambassador",
+          role: "Senior Student Ambassador (Paid)",
+          dates: "Sept 2021 – Sept 2025",
+          summary:
+            "Represented Drexel at high-impact admissions events, leading tours, speaking on panels, and guiding prospective students and families.",
+          bullets: [
+            "Served as a Senior Ambassador for four years, supporting ~48 major admissions events across 16 quarters and engaging thousands of prospective students and families.",
+            "Delivered 60+ campus tours and participated in 15+ student panels, providing clear, personalized guidance on academics, co-op, campus life, and university fit.",
+            "Acted as a primary communicator of Drexel’s co-op model and academic pathways, translating complex programs into compelling, audience-tailored messaging for domestic and international visitors.",
+            "Collaborated with 20–30 ambassadors and admissions staff each term to execute high-volume events with smooth logistics, strong branding consistency, and exceptional visitor satisfaction.",
+          ],
+          tags: [
+            "Leadership",
+            "Public Speaking",
+            "Student Outreach",
+            "Admissions Events",
+          ],
+        },
       ],
     },
 
     {
-      id: "aramark",
-      logo: aramarkLogo,
-      role: "Technical Data Analyst Co-op",
-      company: "Aramark Corp",
-      location: "Philadelphia, PA",
-      dates: "Sept 2023 – Mar 2024",
-      summary:
-        "Supported AI/tooling evaluations and data harmonization to improve developer and finance workflows.",
-      bullets: [
-        "Evaluated over 10 AI-assisted development tools, including Amazon CodeWhisperer and GitHub Copilot, benchmarking accuracy, latency, and usability to identify the most efficient integration options for internal developers.",
-        "Collaborated with the Palantir Foundry Data Harmonization team to pilot new pipeline-builder capabilities, map data schemas, and provide structured feedback improving system reliability and user adoption.",
-        "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
-        "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
-      ],
-      tags: ["Palantir Foundry", "AI Tools", "Data Analysis", "Vendor Spend"],
-    },
-
-    {
-      id: "holman",
+      id: "holman-group",
       logo: holmanLogo,
-      role: "Information Management Developer Co-op",
       company: "Holman",
       location: "Mt. Laurel, NJ",
-      dates: "Sept 2022 – Mar 2023",
-      summary:
-        "Built data integration queries and automation to make fleet operations reports more reliable.",
-      bullets: [
-        "Developed and maintained 100+ SQL/ETL queries across five enterprise databases to unify fleet-management data, ensuring consistent reporting across customer and operational systems.",
-        "Automated 20+ FleetTrak workflow cases through process scripting and query optimization, cutting case resolution times by approximately 35% and improving operations visibility.",
-        "Mapped ~50 inbound client data formats into standardized internal schemas, reducing ingestion and validation errors by nearly 40% and strengthening data integrity across platforms.",
-        "Generated 36 detailed performance reports tracking case lifecycle metrics (lodged, in-progress, completed), providing visibility into resolution speed and operational efficiency.",
+      roles: [
+        {
+          id: "holman-dev",
+          role: "Information Management Developer Co-op",
+          dates: "Sept 2022 – Mar 2023",
+          summary:
+            "Built data integration queries and automation to make fleet operations reports more reliable.",
+          bullets: [
+            "Developed and maintained 100+ SQL/ETL queries across five enterprise databases to unify fleet-management data, ensuring consistent reporting across customer and operational systems.",
+            "Automated 20+ FleetTrak workflow cases through process scripting and query optimization, cutting case resolution times by approximately 35% and improving operations visibility.",
+            "Mapped ~50 inbound client data formats into standardized internal schemas, reducing ingestion and validation errors by nearly 40% and strengthening data integrity across platforms.",
+            "Generated 36 detailed performance reports tracking case lifecycle metrics (lodged, in-progress, completed), providing visibility into resolution speed and operational efficiency.",
+          ],
+          tags: ["SQL / ETL", "FleetTrak", "Reporting", "Data Mapping"],
+        },
       ],
-
-      tags: ["SQL / ETL", "FleetTrak", "Reporting", "Data Mapping"],
     },
   ];
 
   return (
     <section style={wrap}>
-      <header style={headerBar}></header>
-
       <div style={timeline}>
-        {roles.map((job, i) => (
-          <article key={job.id} style={item}>
-            {/* left timeline rail */}
+        {experienceGroups.map((group, i) => (
+          <article key={group.id} style={item}>
             <div style={rail}>
               <div style={railDot} />
-              {i !== roles.length - 1 && <div style={railLine} />}
+              {i !== experienceGroups.length - 1 && <div style={railLine} />}
             </div>
 
-            {/* main card */}
-            <div style={card}>
-              <div style={cardTop}>
+            <div style={groupCard}>
+              <div style={companyHeader}>
                 <div style={leftHeader}>
-                  {job.logo && (
-                    <div style={logoWrap}>
-                      <img
-                        src={job.logo}
-                        alt={`${job.company} logo`}
-                        style={logoImg}
-                      />
-                    </div>
-                  )}
+                  <div style={logoWrap}>
+                    <img
+                      src={group.logo}
+                      alt={`${group.company} logo`}
+                      style={logoImg}
+                    />
+                  </div>
+
                   <div>
-                    <h2 style={roleTitle}>{job.role}</h2>
+                    <h2 style={companyTitle}>{group.company}</h2>
                     <div style={companyLine}>
-                      <span style={company}>{job.company}</span>
+                      <span>{group.location}</span>
                       <span style={dot}>•</span>
-                      <span>{job.location}</span>
+                      <span>
+                        {group.roles.length} role
+                        {group.roles.length > 1 ? "s" : ""}
+                      </span>
                     </div>
                   </div>
                 </div>
-                <div style={dateBadge}>{job.dates}</div>
               </div>
 
-              {job.summary && <p style={summary}>{job.summary}</p>}
+              <div style={nestedRoles}>
+                {group.roles.map((job, idx) => (
+                  <div key={job.id} style={nestedRoleItem}>
+                    <div style={nestedRail}>
+                      <div style={nestedDot} />
+                      {idx !== group.roles.length - 1 && (
+                        <div style={nestedLine} />
+                      )}
+                    </div>
 
-              <ul style={bulletList}>
-                {job.bullets.map((b, idx) => (
-                  <li key={idx}>{b}</li>
+                    <div style={nestedRoleContent}>
+                      <div style={roleTop}>
+                        <div>
+                          <h3 style={roleTitle}>{job.role}</h3>
+                          <div style={roleMeta}>
+                            <span>{group.company}</span>
+                            <span style={dot}>•</span>
+                            <span>{group.location}</span>
+                          </div>
+                        </div>
+
+                        <div style={dateBadge}>{job.dates}</div>
+                      </div>
+
+                      {job.summary && <p style={summary}>{job.summary}</p>}
+
+                      <ul style={bulletList}>
+                        {job.bullets.map((b, bulletIdx) => (
+                          <li key={bulletIdx}>{b}</li>
+                        ))}
+                      </ul>
+
+                      {!!job.tags?.length && (
+                        <div style={tagRow}>
+                          {job.tags.map((t) => (
+                            <span key={t} style={tag}>
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 ))}
-              </ul>
-
-              {job.tags?.length ? (
-                <div style={tagRow}>
-                  {job.tags.map((t) => (
-                    <span key={t} style={tag}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
+              </div>
             </div>
           </article>
         ))}
@@ -218,28 +259,6 @@ const wrap = {
   minHeight: "100vh",
   fontFamily:
     "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
-};
-
-const headerBar = {
-  maxWidth: 980,
-  margin: "0 auto 2.25rem",
-};
-
-const title = {
-  fontSize: "2.35rem",
-  fontWeight: 800,
-  letterSpacing: "0.02em",
-  margin: 0,
-  background: "linear-gradient(90deg, #ffffff 20%, #b5c7ff 60%, #8ae9ff 100%)",
-  WebkitBackgroundClip: "text",
-  color: "transparent",
-};
-
-const subtitle = {
-  marginTop: ".55rem",
-  color: "rgba(236,243,255,0.72)",
-  maxWidth: 520,
-  lineHeight: 1.5,
 };
 
 const timeline = {
@@ -281,27 +300,23 @@ const railLine = {
   width: 2,
   height: "calc(100% - 18px)",
   background:
-    "linear-gradient(180deg, rgba(138,233,255,0.1), rgba(138,233,255,0))",
+    "linear-gradient(180deg, rgba(138,233,255,0.18), rgba(138,233,255,0))",
 };
 
-const card = {
+const groupCard = {
   background: "rgba(10,13,21,0.55)",
   border: "1px solid rgba(255,255,255,0.08)",
-  borderRadius: 16,
+  borderRadius: 18,
   boxShadow: "0 20px 80px rgba(0,0,0,0.35)",
   padding: "1.2rem 1.25rem 1.1rem",
   flex: 1,
   backdropFilter: "blur(6px)",
-  display: "flex",
-  flexDirection: "column",
-  gap: 12,
 };
 
-const cardTop = {
-  display: "flex",
-  justifyContent: "space-between",
-  gap: 14,
-  alignItems: "flex-start",
+const companyHeader = {
+  paddingBottom: "1rem",
+  marginBottom: "1rem",
+  borderBottom: "1px solid rgba(255,255,255,0.08)",
 };
 
 const leftHeader = {
@@ -310,11 +325,18 @@ const leftHeader = {
   gap: 12,
 };
 
+const companyTitle = {
+  fontSize: "1.15rem",
+  fontWeight: 800,
+  margin: 0,
+  color: "#fff",
+};
+
 const logoWrap = {
-  width: 46,
-  height: 46,
-  borderRadius: 10,
-  border: "1px solid rgba(255,255,255,0.25)",
+  width: 48,
+  height: 48,
+  borderRadius: 12,
+  border: "1px solid rgba(255,255,255,0.2)",
   background: "rgba(255,255,255,0.08)",
   display: "grid",
   placeItems: "center",
@@ -326,14 +348,6 @@ const logoImg = {
   width: "100%",
   height: "100%",
   objectFit: "contain",
-  borderRadius: "inherit",
-};
-
-const roleTitle = {
-  fontSize: "1.08rem",
-  fontWeight: 700,
-  margin: 0,
-  color: "#fff",
 };
 
 const companyLine = {
@@ -341,36 +355,98 @@ const companyLine = {
   flexWrap: "wrap",
   gap: 6,
   marginTop: 4,
-  fontSize: ".85rem",
+  fontSize: ".86rem",
+  color: "rgba(235,242,255,0.72)",
+};
+
+const nestedRoles = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 20,
+};
+
+const nestedRoleItem = {
+  display: "flex",
+  gap: 16,
+  position: "relative",
+};
+
+const nestedRail = {
+  width: 20,
+  position: "relative",
+  display: "flex",
+  justifyContent: "center",
+  flexShrink: 0,
+};
+
+const nestedDot = {
+  width: 10,
+  height: 10,
+  borderRadius: "999px",
+  marginTop: 8,
+  background: "rgba(138,233,255,0.95)",
+  boxShadow: "0 0 14px rgba(138,233,255,0.35)",
+  zIndex: 2,
+};
+
+const nestedLine = {
+  position: "absolute",
+  top: 20,
+  width: 2,
+  height: "calc(100% + 12px)",
+  background:
+    "linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.03))",
+};
+
+const nestedRoleContent = {
+  flex: 1,
+  paddingBottom: "0.25rem",
+};
+
+const roleTop = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "flex-start",
+  gap: 14,
+};
+
+const roleTitle = {
+  fontSize: "1.02rem",
+  fontWeight: 700,
+  margin: 0,
+  color: "#fff",
+};
+
+const roleMeta = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: 6,
+  marginTop: 4,
+  fontSize: ".83rem",
   color: "rgba(235,242,255,0.7)",
 };
 
-const company = {
-  fontWeight: 500,
-  color: "rgba(255,255,255,0.9)",
-};
-
-const dot = { opacity: 0.4 };
+const dot = { opacity: 0.45 };
 
 const dateBadge = {
   background: "rgba(4,10,18,0.45)",
   border: "1px solid rgba(138,233,255,0.21)",
   borderRadius: 999,
   padding: "4px 12px 5px",
-  fontSize: ".7rem",
+  fontSize: ".72rem",
   color: "rgba(236,243,255,0.85)",
   whiteSpace: "nowrap",
 };
 
 const summary = {
-  margin: 0,
+  margin: "0.65rem 0 0",
   fontSize: ".85rem",
   color: "rgba(236,243,255,0.78)",
   lineHeight: 1.5,
 };
 
 const bulletList = {
-  margin: 0,
+  margin: "0.7rem 0 0",
   paddingLeft: "1.15rem",
   display: "grid",
   gap: 4,
@@ -383,7 +459,7 @@ const tagRow = {
   display: "flex",
   flexWrap: "wrap",
   gap: 8,
-  marginTop: 2,
+  marginTop: 12,
 };
 
 const tag = {
