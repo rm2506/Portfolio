@@ -2,9 +2,106 @@ import React from "react";
 import aramarkLogo from "../assets/logos/aramark.png";
 import holmanLogo from "../assets/logos/holman.png";
 import drexelLogo from "../assets/logos/drexel.png";
+import sqsm from "../assets/logos/SquashSmartsLogo.png";
 
 export default function Experience() {
   const roles = [
+    {
+      id: "aramark",
+      logo: aramarkLogo,
+      role: "Technical Analyst",
+      company: "Aramark Corp",
+      location: "Philadelphia, PA",
+      dates: "Apr 2026 - Present",
+      summary:
+        "Driving enterprise data reliability and system integration across global supply chain and finance operations, with a focus on scalability, automation, and AI-enabled optimization.",
+      bullets: [
+        "Supported enterprise data processes and system integrations across Global Supply Chain and Finance systems",
+        "Managed and monitored data feeds to ensure accuracy, consistency, and timely delivery across cross-functional platforms",
+        "Improved data quality and reduced manual processing by enhancing data formats and automating workflows",
+        "Maintained and troubleshot legacy applications to ensure system stability and business continuity",
+        "Contributed to migration of legacy data feeds to modern platforms, improving scalability and performance",
+        "Performed data coding, validation, mastering, and testing to uphold high data integrity standards",
+        "Partnered with Finance, IT, and distribution teams to align data processes with operational and financial needs",
+        "Documented data flows, system requirements, and technical processes to improve transparency and knowledge sharing",
+        "Supported adoption of AI-enabled tools for data validation, monitoring, and workflow optimization",
+        "Identified and contributed to AI and automation use cases aligned with enterprise governance and responsible AI practices",
+      ],
+      tags: [
+        "Data Engineering",
+        "System Integration",
+        "Data Quality",
+        "Automation",
+        "AI Tools",
+      ],
+    },
+
+    {
+      id: "aramark",
+      logo: aramarkLogo,
+      role: "IT Specialist",
+      company: "Aramark Corp",
+      location: "Philadelphia, PA",
+      dates: "Dec 2025 – April 2026",
+      summary:
+        "Supported finance and supply chain systems by improving data reliability, modernizing workflows, and enabling scalable infrastructure.",
+      bullets: [
+        "Ensured accurate and timely data flows across internal systems and external partners, supporting critical finance and supply chain operations",
+        "Streamlined data processes and standardized formats to reduce manual effort and improve efficiency in financial reporting pipelines",
+        "Contributed to the migration of legacy data feeds to a modern platform, enhancing scalability, performance, and maintainability",
+        "Assisted in data mastering, validation, and testing to maintain high data quality and support reliable decision-making",
+        "Partnered with Finance, IT, and distribution teams to identify process gaps and implement practical, data-driven solutions",
+      ],
+      tags: [
+        "Process Optimization",
+        "Data Engineering",
+        "Financial Reporting",
+        "Data Integration",
+      ],
+    },
+
+    {
+      id: "aramark",
+      logo: aramarkLogo,
+      role: "Technical Data Analyst Co-op",
+      company: "Aramark Corp",
+      location: "Philadelphia, PA",
+      dates: "Sept 2023 – Mar 2024",
+      summary:
+        "Supported AI/tooling evaluations and data harmonization to improve developer and finance workflows.",
+      bullets: [
+        "Evaluated over 10 AI-assisted development tools, including Amazon CodeWhisperer and GitHub Copilot, benchmarking accuracy, latency, and usability to identify the most efficient integration options for internal developers.",
+        "Collaborated with the Palantir Foundry Data Harmonization team to pilot new pipeline-builder capabilities, map data schemas, and provide structured feedback improving system reliability and user adoption.",
+        "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
+        "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
+      ],
+      tags: ["Palantir Foundry", "AI Tools", "Data Analysis", "Vendor Spend"],
+    },
+
+    {
+      id: "sqsm",
+      logo: sqsm,
+      role: "Coordinator of Technology (Part-Time)",
+      company: "SquashSmarts",
+      location: "Philadelphia, PA",
+      dates: "Nov 2025 – Present",
+      summary:
+        "Driving technology strategy and AI adoption to modernize nonprofit operations and enhance program delivery.",
+      bullets: [
+        "Leading AI implementation initiatives to streamline workflows and improve organizational effectiveness",
+        "Evaluating and deploying hardware, software, and digital systems to optimize operational efficiency",
+        "Designing and prototyping technology solutions aligned with youth academic and enrichment programs",
+        "Partnering with executive leadership to define and scale long-term technology strategy",
+        "Advising on system architecture, automation opportunities, and data management best practices",
+      ],
+      tags: [
+        "AI Implementation",
+        "Nonprofit Technology",
+        "System Architecture",
+        "Operational Efficiency",
+      ],
+    },
+
     {
       id: "drexel-ambassador",
       logo: drexelLogo,
@@ -28,23 +125,6 @@ export default function Experience() {
       ],
     },
 
-    {
-      id: "aramark",
-      logo: aramarkLogo,
-      role: "Technical Data Analyst Co-op",
-      company: "Aramark Corp",
-      location: "Philadelphia, PA",
-      dates: "Sept 2023 – Mar 2024",
-      summary:
-        "Supported AI/tooling evaluations and data harmonization to improve developer and finance workflows.",
-      bullets: [
-        "Evaluated over 10 AI-assisted development tools, including Amazon CodeWhisperer and GitHub Copilot, benchmarking accuracy, latency, and usability to identify the most efficient integration options for internal developers.",
-        "Collaborated with the Palantir Foundry Data Harmonization team to pilot new pipeline-builder capabilities, map data schemas, and provide structured feedback improving system reliability and user adoption.",
-        "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
-        "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
-      ],
-      tags: ["Palantir Foundry", "AI Tools", "Data Analysis", "Vendor Spend"],
-    },
     {
       id: "holman",
       logo: holmanLogo,
