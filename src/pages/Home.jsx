@@ -478,14 +478,11 @@ export default function Home() {
                   "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
               }}
             >
-              My multicultural background gave me the patience to listen and my
-              technical training gave me the precision to build. At Drexel
-              University, where I’m pursuing a B.S. in Computer Science, I’ve
-              explored how intelligence can be built not just into machines, but
-              into systems that empower people. My focus on Artificial
-              Intelligence, Machine Learning, and Software Engineering has been
-              less about algorithms alone, and more about designing clarity,
-              empathy, and purpose into technology.
+              Shaped by experiences across cultures, I learned that clarity
+              begins with listening. At Drexel University, I have focused on
+              Artificial Intelligence, Machine Learning, and Software
+              Engineering not just to create models, but to design systems that
+              are intuitive, scalable, and human-centered.
             </p>
           </div>
         </section>
