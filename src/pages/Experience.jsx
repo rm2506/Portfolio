@@ -42,7 +42,7 @@ export default function Experience() {
       role: "IT Specialist",
       company: "Aramark Corp",
       location: "Philadelphia, PA",
-      dates: "Dec 2025 – April 2026",
+      dates: "Dec 2025 – Apr 2026",
       summary:
         "Supported finance and supply chain systems by improving data reliability, modernizing workflows, and enabling scalable infrastructure.",
       bullets: [
@@ -58,24 +58,6 @@ export default function Experience() {
         "Financial Reporting",
         "Data Integration",
       ],
-    },
-
-    {
-      id: "aramark",
-      logo: aramarkLogo,
-      role: "Technical Data Analyst Co-op",
-      company: "Aramark Corp",
-      location: "Philadelphia, PA",
-      dates: "Sept 2023 – Mar 2024",
-      summary:
-        "Supported AI/tooling evaluations and data harmonization to improve developer and finance workflows.",
-      bullets: [
-        "Evaluated over 10 AI-assisted development tools, including Amazon CodeWhisperer and GitHub Copilot, benchmarking accuracy, latency, and usability to identify the most efficient integration options for internal developers.",
-        "Collaborated with the Palantir Foundry Data Harmonization team to pilot new pipeline-builder capabilities, map data schemas, and provide structured feedback improving system reliability and user adoption.",
-        "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
-        "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
-      ],
-      tags: ["Palantir Foundry", "AI Tools", "Data Analysis", "Vendor Spend"],
     },
 
     {
@@ -123,6 +105,24 @@ export default function Experience() {
         "Student Outreach",
         "Admissions Events",
       ],
+    },
+
+    {
+      id: "aramark",
+      logo: aramarkLogo,
+      role: "Technical Data Analyst Co-op",
+      company: "Aramark Corp",
+      location: "Philadelphia, PA",
+      dates: "Sept 2023 – Mar 2024",
+      summary:
+        "Supported AI/tooling evaluations and data harmonization to improve developer and finance workflows.",
+      bullets: [
+        "Evaluated over 10 AI-assisted development tools, including Amazon CodeWhisperer and GitHub Copilot, benchmarking accuracy, latency, and usability to identify the most efficient integration options for internal developers.",
+        "Collaborated with the Palantir Foundry Data Harmonization team to pilot new pipeline-builder capabilities, map data schemas, and provide structured feedback improving system reliability and user adoption.",
+        "Processed and analyzed 64,000+ vendor records to uncover spend inconsistencies across financial and supply-chain systems, contributing to a more transparent vendor performance dataset.",
+        "Developed a data-driven vendor exposure plan highlighting 50+ certified local and minority-owned suppliers, directly supporting Aramark’s DEI and sustainability sourcing objectives.",
+      ],
+      tags: ["Palantir Foundry", "AI Tools", "Data Analysis", "Vendor Spend"],
     },
 
     {
